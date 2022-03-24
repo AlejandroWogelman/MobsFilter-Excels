@@ -4,6 +4,9 @@
   background-color: black;
   margin: 0 10px;
 }
+.buttons-copy {
+  min-height: 36px;
+}
 
 .btn {
   background-color: rgb(201, 75, 75);

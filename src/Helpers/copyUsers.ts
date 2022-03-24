@@ -9,7 +9,7 @@ export const copyData = (
   if (name === "no-cucas") {
     ref.current!.innerText = "Copiado";
     const filter = users
-      .filter((u) => u.total >= filesNames.length * 5)
+      .filter((u) => u.total >= u.days * 5)
       .map((u, i) =>
         u.name !== "Anonymous"
           ? `${u.name} -lvl2: ${u.L2} -lvl3: ${u.L3} -lvl4: ${u.L4} -lvl5: ${u.L5} -T: ${u.total} \n`
@@ -24,7 +24,7 @@ export const copyData = (
   } else {
     ref.current!.innerText = "Copiado";
     const filter = users
-      .filter((u) => u.total < filesNames.length * 5)
+      .filter((u) => u.total < u.days * 5)
       .map((u) =>
         u.name !== "Anonymous"
           ? `${u.name} -lvl2: ${u.L2} -lvl3: ${u.L3} -lvl4: ${u.L4} -lvl5: ${u.L5} -T: ${u.total} \n`
