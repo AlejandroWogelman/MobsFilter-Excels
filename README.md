@@ -1,4 +1,5 @@
 # MobsFilter-Execels
+
 +Aplicación para el filtrado y manejo de excels de "cacería" de 100 jugadores. Recibiendo multiples excels de este tipo realizando un conteo, filtrado y muestra de datos.
 
 +Ya no se necesita realizar el conteo de excel por excel, solo se colocan los informes (sin importar cantidad) y veremos los resultados del gremio en segundos. Pudiendo así realizar un seguimiento semanal en lugar de diario (y haciendo manual el conteo).

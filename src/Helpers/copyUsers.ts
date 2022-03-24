@@ -12,12 +12,13 @@ export const copyData = (
       .filter((u) => u.total >= u.days * 5)
       .map((u, i) =>
         u.name !== "Anonymous"
-          ? `${u.name} -lvl2: ${u.L2} -lvl3: ${u.L3} -lvl4: ${u.L4} -lvl5: ${u.L5} -T: ${u.total} \n`
+          ? `${u.name} D:${u.days} ${
+              u.days > filesNames.length ? "(D +1)" : ""
+            } T: ${u.total}  \n`
           : null
-      )
-      .join("-");
+      );
 
-    navigator.clipboard.writeText(filter);
+    navigator.clipboard.writeText(filter.join("-"));
     setTimeout(() => {
       ref.current!.innerHTML = "Copiar";
     }, 3000);
@@ -27,7 +28,9 @@ export const copyData = (
       .filter((u) => u.total < u.days * 5)
       .map((u) =>
         u.name !== "Anonymous"
-          ? `${u.name} -lvl2: ${u.L2} -lvl3: ${u.L3} -lvl4: ${u.L4} -lvl5: ${u.L5} -T: ${u.total} \n`
+          ? `${u.name} D:${u.days} ${
+              u.days > filesNames.length ? "(D +1)" : ""
+            } T: ${u.total}  \n`
           : null
       )
       .join("-");
